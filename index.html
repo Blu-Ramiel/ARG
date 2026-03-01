@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eli's Profile</title>
+    <title>Eli's MySpace Profile</title>
     <style>
-        body { background-color: #f0f0f9; font-family: Arial, sans-serif; }
-        .hidden-content { display: none; }
-        .reveal { cursor: pointer; color: blue; text-decoration: underline; }
+        body { font-family: 'Arial', sans-serif; background-color: #f0f0f0; color: #333; }
+        .sidebar { width: 250px; float: left; padding: 10px; background: #fff; border: 1px solid #ddd; }
+        .gallery { margin-left: 270px; padding: 10px; }
+        .hidden { display: none; }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>Eli's Profile</h1>
-        <img src="eli_profile_photo.jpg" alt="Eli's Photo" />
-    </header>
 
-    <section>
-        <h2>About Eli</h2>
-        <p>Eli is a 15-year-old girl who has been missing. Friends remember her as vibrant and bubbly.</p>
-    </section>
+<div class="sidebar">
+    <h1>Eli's Profile</h1>
+    <p>Age: 15</p>
+    <p>Status: Missing since 2021-09-15</p>
+    <h2>About Me</h2>
+    <p>Hey! I'm Eli. I ❤️ hanging out with my best friend, <strong>Rowan</strong>. We love exploring abandoned places and reading weird stories together!</p>
+    <h2>Interests</h2>
+    <ul>
+        <li>🌌 Stargazing</li>
+        <li>🎶 Listening to music from 2003</li>
+        <li>📖 Writing creepy fiction</li>
+        <li>🎨 Drawing</li>
+        <li>👻 Paranormal activities!</li>
+    </ul>
+    <h2>Contact</h2>
+    <p>AIM: EliRocks123<br>Email: elilovesrowan@example.com</p>
+    <p class="hidden">Weird Date: 2007-01-01</p>
+</div>
 
-    <section>
-        <h2>Photos</h2>
-        <img src="eli_rowan_photo1.jpg" alt="Eli with Rowan" />
-        <img src="eli_rowan_photo2.jpg" alt="Eli with Rowan" />
-    </section>
+<div class="gallery">
+    <h2>Photo Gallery</h2>
+    <img src="photo1.jpg" alt="Eli and Rowan at the park" />
+    <p>Caption: Eli and Rowan at the park. Rowan's silly face!</p>
+    <p>Comments: <i>"You guys look awesome!" - Neighbor</i></p>
 
-    <section>
-        <h2>Comments</h2>
-        <p>"I still hear her laugh in the wind..." - Anonymous</p>
-        <p>"Saw her yesterday at the old house, but she looked different." - Mysterious Stranger</p>
-    </section>
+    <img src="photo2.jpg" alt="Eli at her birthday party" />
+    <p>Caption: Eli's 15th birthday! The cake was so good!</p>
+    <p>Comments: <i>"Happy Birthday Eli!" - Friend</i></p>
 
-    <section>
-        <h2>Notable Dates</h2>
-        <p>March 15, 2026: Last seen near the old playground.</p>
-        <p>February 29, 2026: Strange notes found in her locker.</p>
-    </section>
+    <img src="photo3.jpg" alt="Eli in front of an abandoned house" />
+    <p>Caption: Exploring old places with Rowan.</p>
+    <p>Comments: <i>"So creepy!" - Anonymous</i></p>
+</div>
 
-    <section>
-        <h2>Hidden Content</h2>
-        <p class="reveal" onclick="document.getElementById('hiddenNotes').style.display='block'; this.style.display='none';">Click here to reveal hidden notes...</p>
-        <div id="hiddenNotes" class="hidden-content">
-            <p>"I have a secret plan..." - Eli</p>
-            <p>"Meet me where the shadows fall." - Eli</p>
-        </div>
-    </section>
+<p class="hidden">Message to anyone looking for me: Please find me soon! I miss my family and Rowan so much!</p>
+
 </body>
-
 </html>
