@@ -4,14 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MySpace Profile</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f0f0f0;
+            color: #000;
+            margin: 0;
+        }
+        .container {
+            width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #0072bb;
+        }
+        .profile-header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            text-align: left;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My MySpace Profile</h1>
-    <p>This is where I can share my interests, friends, and more!</p>
-    <ul>
-        <li>About Me: Music Lover, Tech Geek, and Foodie</li>
-        <li>Favorite Bands: The Beatles, Radiohead, and Daft Punk</li>
-        <li>Hobbies: Playing Guitar, Coding, and Traveling</li>
-    </ul>
+    <div class="container">
+        <div class="profile-header">
+            <h1>Welcome to My Profile!</h1>
+            <p>Check out my interests and friends!</p>
+        </div>
+        <table>
+            <tr>
+                <th>Interests</th>
+                <th>Friends</th>
+            </tr>
+            <tr>
+                <td>Music, Movies, Coding, Traveling</td>
+                <td>John Doe, Jane Doe, User123</td>
+            </tr>
+        </table>
+        <div class="footer">
+            <p>&copy; 2026 MySpace Fan Club. All rights reserved.</p>
+        </div>
+    </div>
 </body>
 </html>
