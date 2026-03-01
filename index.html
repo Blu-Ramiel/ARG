@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli's Profile</title>
+    <style>
+        body { background-color: #f0f0f9; font-family: Arial, sans-serif; }
+        .hidden-content { display: none; }
+        .reveal { cursor: pointer; color: blue; text-decoration: underline; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Eli's Profile</h1>
+        <img src="eli_profile_photo.jpg" alt="Eli's Photo" />
+    </header>
+
+    <section>
+        <h2>About Eli</h2>
+        <p>Eli is a 15-year-old girl who has been missing. Friends remember her as vibrant and bubbly.</p>
+    </section>
+
+    <section>
+        <h2>Photos</h2>
+        <img src="eli_rowan_photo1.jpg" alt="Eli with Rowan" />
+        <img src="eli_rowan_photo2.jpg" alt="Eli with Rowan" />
+    </section>
+
+    <section>
+        <h2>Comments</h2>
+        <p>"I still hear her laugh in the wind..." - Anonymous</p>
+        <p>"Saw her yesterday at the old house, but she looked different." - Mysterious Stranger</p>
+    </section>
+
+    <section>
+        <h2>Notable Dates</h2>
+        <p>March 15, 2026: Last seen near the old playground.</p>
+        <p>February 29, 2026: Strange notes found in her locker.</p>
+    </section>
+
+    <section>
+        <h2>Hidden Content</h2>
+        <p class="reveal" onclick="document.getElementById('hiddenNotes').style.display='block'; this.style.display='none';">Click here to reveal hidden notes...</p>
+        <div id="hiddenNotes" class="hidden-content">
+            <p>"I have a secret plan..." - Eli</p>
+            <p>"Meet me where the shadows fall." - Eli</p>
+        </div>
+    </section>
+</body>
+
+</html>
