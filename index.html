@@ -1,72 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySpace Profile</title>
-    <style>
-        body {
-            font-family: 'Verdana', sans-serif;
-            background-color: #f0f0f0;
-            color: #000;
-            margin: 0;
-        }
-        .container {
-            width: 800px;
-            margin: auto;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h1 {
-            font-size: 24px;
-            color: #0072bb;
-        }
-        .profile-header {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #dcdcdc;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #dcdcdc;
-            text-align: left;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #666;
-        }
-    </style>
+  <title>Mysterious MySpace Profile</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(to bottom, #ffe0ff, #fff0ff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    #topbar {
+      background-color: #9900cc;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    #profileContainer {
+      display: flex;
+      margin: 20px;
+    }
+
+    #leftSidebar {
+      width: 250px;
+      background-color: #ffccff;
+      padding: 10px;
+      margin-right: 20px;
+      border: 2px dotted #9900cc;
+    }
+
+    #profilePic {
+      width: 100%;
+      border: 2px solid #9900cc;
+    }
+
+    #mainContent {
+      flex: 1;
+      background-color: #fff0ff;
+      padding: 20px;
+      border: 2px dotted #9900cc;
+    }
+
+    #friendsSidebar {
+      width: 200px;
+      background-color: #ffccff;
+      padding: 10px;
+      margin-left: 20px;
+      float: right;
+      border: 2px dotted #9900cc;
+    }
+
+    a.hiddenClue {
+      color: #9900cc;
+      text-decoration: none;
+      border-bottom: 1px dotted #9900cc;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 8px 15px;
+      font-size: 1em;
+      background-color: #9900cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* subtle sparkle effect for MySpace nostalgia */
+    .sparkle {
+      animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+      0%,100% {opacity:1;}
+      50% {opacity:0.5;}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-header">
-            <h1>Welcome to My Profile!</h1>
-            <p>Check out my interests and friends!</p>
-        </div>
-        <table>
-            <tr>
-                <th>Interests</th>
-                <th>Friends</th>
-            </tr>
-            <tr>
-                <td>Music, Movies, Coding, Traveling</td>
-                <td>John Doe, Jane Doe, User123</td>
-            </tr>
-        </table>
-        <div class="footer">
-            <p>&copy; 2026 MySpace Fan Club. All rights reserved.</p>
-        </div>
+  <div id="topbar">
+    <h1>Mysterious MySpace</h1>
+  </div>
+
+  <div id="profileContainer">
+    <div id="leftSidebar">
+      <img id="profilePic" src="images/profile.jpg" alt="Profile Picture">
+      <h2>About Me</h2>
+      <p>
+        Just a music lover and a collector of strange things. <br>
+        Sometimes I leave little hints in the songs I upload.
+      </p>
+      <p>
+        Favorite lyric today: <span class="hiddenClue" data-message="You noticed the odd capitalization? Pay attention.">tHe sUn rIsEs</span>
+      </p>
     </div>
+
+    <div id="mainContent">
+      <div id="musicPlayer">
+        <p>My Music:</p>
+        <audio id="bgMusic" controls src="music/song1.mp3"></audio>
+        <p class="sparkle">♪ Listen closely… maybe something is hidden in the track titles. ♪</p>
+      </div>
+
+      <p>
+        Just wrote some thoughts:
+        <span class="hiddenClue" data-message="Some words are extra spaced… maybe they mean something.">every  other word</span>
+      </p>
+
+      <p>
+        I sometimes doodle in the margins. Hover over text and images… you might find something.
+      </p>
+    </div>
+  </div>
+
+  <div id="friendsSidebar">
+    <h3>Friends</h3>
+    <ul>
+      <li><span class="hiddenClue" data-message="This friend’s name seems familiar… check older posts.">Luna</span></li>
+      <li>Riley</li>
+      <li><span class="hiddenClue" data-message="Notice the pattern? It could be a hint.">Echo</span></li>
+    </ul>
+  </div>
+
+  <script>
+    // subtle hidden interactions
+    document.querySelectorAll('.hiddenClue').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        console.log("Clue triggered:", el.dataset.message);
+      });
+      el.addEventListener('click', () => {
+        alert("You found something: " + el.dataset.message);
+      });
+    });
+
+    // auto-play background music if allowed
+    const audio = document.getElementById('bgMusic');
+    audio.volume = 0.6;
+    audio.loop = true;
+    audio.play().catch(()=>{console.log("Autoplay blocked, use play button")});
+  </script>
 </body>
 </html>
